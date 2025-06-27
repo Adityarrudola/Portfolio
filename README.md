@@ -87,9 +87,11 @@ For a TypeScript-ready version, see the [React + TypeScript + Vite Template](htt
 "dependencies": {
   "react": "^18.x",
   "react-dom": "^18.x",
+  "react-router-dom": "^7.6.2",
   "react-icons": "^4.x",
   "react-toastify": "^9.x",
-  "typewriter-effect": "^2.x"
+  "typewriter-effect": "^2.x",
+  "react-parallax-tilt": "^1.7.297",
 }
 ```
 
