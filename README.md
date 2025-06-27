@@ -102,14 +102,4 @@ For a TypeScript-ready version, see the [React + TypeScript + Vite Template](htt
 - Integrating toast notifications and interactive animations
 - Organizing reusable React components effectively
 
----
 
-## 🧾 License
-
-MIT
-
----
-
-## 🙌 Contribute or Reach Out
-
-Have feedback or ideas? Feel free to fork, star ⭐, or open an issue!
