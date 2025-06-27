@@ -8,13 +8,6 @@ A fast, modern, and responsive developer portfolio built using **React**, powere
 
 🌐 [View Portfolio](https://adityarrudola.github.io/Portfolio/)
 
----
-
-## 📸 Preview
-
-> _(Add a preview screenshot here, if available)_  
-> Example:  
-> ![Portfolio Preview](https://your-image-link.com)
 
 ---
 
