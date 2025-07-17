@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
 # 🚀 React Portfolio Website – Built with Vite + Tailwind
 
 A fast, modern, and responsive developer portfolio built using **React**, powered by **Vite** for lightning-fast builds and hot module replacement. Enhanced with **Tailwind CSS**, **Typewriter Effect**, and **Toast Notifications**, this portfolio beautifully showcases your work, skills, and contact details.
@@ -21,6 +7,11 @@ A fast, modern, and responsive developer portfolio built using **React**, powere
 ## 🔗 Live Demo
 
 🌐 [View Portfolio](https://adityarrudola.github.io/Portfolio/)
+
+---
+
+## 📸 Preview
+<img width="1917" height="902" alt="image" src="https://github.com/user-attachments/assets/3e6cde7a-07a7-49ab-88fe-88e3b647f68e" />
 
 
 ---
@@ -44,6 +35,7 @@ A fast, modern, and responsive developer portfolio built using **React**, powere
 - 🔔 Toast messages for user actions
 - 📌 Modular components and clean layout
 - 📤 Contact form with alerts
+- 🌗 Optional dark mode toggle *(if included)*
 
 ---
 
@@ -101,11 +93,9 @@ For a TypeScript-ready version, see the [React + TypeScript + Vite Template](htt
 "dependencies": {
   "react": "^18.x",
   "react-dom": "^18.x",
-  "react-router-dom": "^7.6.2",
   "react-icons": "^4.x",
   "react-toastify": "^9.x",
-  "typewriter-effect": "^2.x",
-  "react-parallax-tilt": "^1.7.297",
+  "typewriter-effect": "^2.x"
 }
 ```
 
@@ -118,5 +108,15 @@ For a TypeScript-ready version, see the [React + TypeScript + Vite Template](htt
 - Integrating toast notifications and interactive animations
 - Organizing reusable React components effectively
 
+---
 
->>>>>>> 0269bd347348237b495e296df891ae3e2b6f5e4e
+## 🧾 License
+
+MIT
+
+---
+
+## 🙌 Contribute or Reach Out
+
+Have feedback or ideas? Feel free to fork, star ⭐, or open an issue!
+
