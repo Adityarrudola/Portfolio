@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://adityarudola.github.io/{ortfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
