@@ -1,115 +1,103 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
-const Contact = () => {
-  const form = useRef();
-  const [isSent, setIsSent] = useState(false);
+export default function Contact() {
+  const formRef = useRef(null);
+  const [isValid, setIsValid] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    emailjs
-      .sendForm(
-        "service_57l7gfs", // emailjs service id 
-        "template_eaizc2f",  //  EmailJS Template ID
-        form.current,
-        "hsrSCVdC8oyBpWo6f"  // EmailJS Public Key
-      )
-      .then(
-        () => {
-          setIsSent(true);
-          form.current.reset(); // Reset form fields after sending
-          toast.success("Message sent successfully! ✅", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-          });
-        },
-        (error) => {
-          console.error("Error sending message:", error);
-          toast.error("Failed to send message. Please try again.", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-          });
-        }
-      );
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    ).then(() => {
+        alert("Message sent successfully!");
+        formRef.current.reset();
+        setIsValid(false);
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("Failed to send message. Try again.");
+      })
+      .finally(() => setLoading(false));
   };
 
   return (
-    <section
-      id="contact"
-      className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw]"
-    >
-      {/* Toast Container */}
-      <ToastContainer />
+    <article className="contact active">
+      {/* Header */}
+      <header>
+        <h2 className="h2 article-title">Contact</h2>
+      </header>
 
-      {/* Section Title */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">CONTACT</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          I’d love to hear from you—reach out for any opportunities or questions!
-        </p>
-      </div>
+      {/* Map */}
+      <section className="mapbox">
+        <figure>
+          <iframe
+            title="Delhi Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.5400512527!2d77.0688975472658!3d28.52725273874944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1652615438865!5m2!1sen!2sin"
+            width="400"
+            height="300"
+            loading="lazy"
+            style={{ border: 0 }}
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </figure>
+      </section>
 
-      {/* Contact Form */}
-      <div className="mt-8 w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
-        <h3 className="text-xl font-semibold text-white text-center">
-          Connect With Me <span className="ml-1">🚀</span>
-        </h3>
+      {/* Contact form */}
+      <section className="contact-form">
+        <h3 className="h3 form-title">Contact Form</h3>
 
-        <form ref={form} onSubmit={sendEmail} className="mt-4 flex flex-col space-y-4">
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Your Email"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
-          />
-          <input
-            type="text"
-            name="user_name"
-            placeholder="Your Name"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
-          />
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
-          />
+        <form
+          ref={formRef}
+          className="form"
+          onSubmit={sendEmail}
+          onChange={(e) => setIsValid(e.currentTarget.checkValidity())}
+        >
+          {/* REQUIRED FOR SUBJECT {{title}} */}
+          <input type="hidden" name="title" value="Portfolio Contact Form" />
+
+          <div className="input-wrapper">
+            <input
+              type="text"
+              name="name"
+              className="form-input"
+              placeholder="Full name"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              className="form-input"
+              placeholder="Email address"
+              required
+            />
+          </div>
+
           <textarea
             name="message"
-            placeholder="Message"
-            rows="4"
+            className="form-input"
+            placeholder="Your Message"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
-          />
-          
-          {/* Send Button */}
+          ></textarea>
+
           <button
+            className="form-btn"
             type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
+            disabled={!isValid || loading}
           >
-            Send
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>{loading ? "Sending..." : "Send Message"}</span>
           </button>
         </form>
-      </div>
-    </section>
+      </section>
+    </article>
   );
-};
-
-export default Contact;
+}

@@ -1,86 +1,104 @@
-import React from 'react';
-import { Typewriter } from 'react-simple-typewriter';
-import Tilt from 'react-parallax-tilt';
-import profileImage from '../assets/profile-image.png';
+import React from "react";
 
-const About = () => {
+export default function About() {
   return (
-    <section
-      id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
-    >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
-        {/* Left Side */}
-        <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
-            Hi, I am
-          </h1>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            Aditya Rudola
-          </h2>
+    <article className="about active">
+      {/* Header */}
+      <header>
+        <h2 className="h2 article-title">About me</h2>
+      </header>
 
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
-            <span className="text-white">I am a </span>
-            <span className="text-[#8245ec]">
-              <Typewriter
-                words={[
-                  'Postgraduate Student',
-                  'Cloud Practitioner',
-                  'Coder',
-                  'React Developer',
-                ]}
-                loop={true}
-                cursor
-                cursorStyle="|"
-                typeSpeed={100}
-                deleteSpeed={50}
-                delaySpeed={2000}
+      {/* About text */}
+      <section className="about-text">
+        <p>
+          I am a Cloud Engineer currently pursuing a Master’s in Computer Applications at Jaypee Institute of Information Technology. With a strong foundation in C++ and Java, I specialize in designing scalable, secure cloud-native solutions on AWS and automating infrastructure.
+        </p>
+
+        <p>
+          My expertise lies in cloud security, containerization, and orchestration using Docker and Kubernetes, along with infrastructure automation through DevOps practices. I am passionate about building reliable, secure backend systems and production-ready deployment pipelines that scale efficiently.
+        </p>
+      </section>
+
+      {/* What I do */}
+      <section className="service">
+        <h3 className="h3 service-title">What I do</h3>
+
+        <ul className="service-list">
+          <li className="service-item">
+            <div className="service-icon-box">
+              <img
+                src="/assets/images/icon-dev.svg"
+                alt="Cloud architecture icon"
+                width="40"
               />
-            </span>
-          </h3>
+            </div>
 
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            Passionate postgraduate student with a strong foundation in ASP.NET, C++, C#, and full-stack web development. 
-            Proficient in modern technologies including React, Node.js, and cloud platforms like AWS. 
-            With a deep interest in scalable systems and clean UI/UX, I strive to build impactful solutions. 
-            Open to opportunities that challenge my skills and let me grow while solving real-world problems.
-          </p>
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">Cloud Architecture</h4>
+              <p className="service-item-text">
+                Designing secure and scalable cloud-native solutions on AWS using
+                services like EC2, S3, IAM, Lambda, API Gateway, and DynamoDB.
+              </p>
+            </div>
+          </li>
 
-          <a
-            href="https://drive.google.com/file/d/1gNpWcRr5EGvAPwJQ1rRGFcceXMPQjbjK/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
-            style={{
-              background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-              boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
-            }}
-          >
-            DOWNLOAD CV
-          </a>
-        </div>
+          <li className="service-item">
+            <div className="service-icon-box">
+              <img
+                src="/assets/images/icon-design.svg"
+                alt="Containerization and orchestration icon"
+                width="40"
+              />
+            </div>
 
-        {/* Right Side */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
-          <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
-          >
-            <img
-              src={profileImage}
-              alt="Aditya Rudola"
-              className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
-            />
-          </Tilt>
-        </div>
-      </div>
-    </section>
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">Docker & Kubernetes</h4>
+              <p className="service-item-text">
+                Containerizing applications with Docker and managing scalable,
+                production-ready workloads using Kubernetes.
+              </p>
+            </div>
+          </li>
+
+          <li className="service-item">
+            <div className="service-icon-box">
+              <img
+                src="/assets/images/icon-design.svg"
+                alt="DevOps and automation icon"
+                width="40"
+              />
+            </div>
+
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">DevOps & Automation</h4>
+              <p className="service-item-text">
+                Implementing Infrastructure as Code with Terraform and automating
+                deployments to ensure consistency, reliability, and scalability.
+              </p>
+            </div>
+          </li>
+
+          <li className="service-item">
+            <div className="service-icon-box">
+              <img
+                src="/assets/images/icon-dev.svg"
+                alt="CI/CD and security icon"
+                width="40"
+              />
+            </div>
+
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">CI/CD & Cloud Security</h4>
+              <p className="service-item-text">
+                Building secure CI/CD pipelines using GitHub Actions and ArgoCD,
+                focusing on access control, secrets management, and best security
+                practices.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      
+    </article>
   );
-};
-
-export default About;
+}
