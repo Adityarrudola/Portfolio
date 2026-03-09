@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Navbar({ activePage, setActivePage }) {
-  const pages = ["about", "resume", "portfolio", "contact"];
+  const pages = ["about", "resume", "portfolio"];
 
   return (
     <nav className="navbar">

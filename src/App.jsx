@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
 
 export default function App() {
   const [activePage, setActivePage] = useState("about");
@@ -18,7 +17,6 @@ export default function App() {
         {activePage === "about" && <About />}
         {activePage === "resume" && <Resume />}
         {activePage === "portfolio" && <Portfolio/>}
-        {activePage === "contact" && <Contact />}
       </div>
     </main>
   );

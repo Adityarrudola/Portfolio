@@ -8,7 +8,7 @@ export default function Sidebar() {
       <div className="sidebar-info">
         <figure className="avatar-box">
           <img
-            src="/assets/images/my-avatar.png"
+            src="/images/profile.png"
             alt="Aditya Rudola"
             width="80"
           />

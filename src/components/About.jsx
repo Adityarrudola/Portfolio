@@ -3,6 +3,7 @@ import React from "react";
 export default function About() {
   return (
     <article className="about active">
+
       {/* Header */}
       <header>
         <h2 className="h2 article-title">About me</h2>
@@ -10,25 +11,49 @@ export default function About() {
 
       {/* About text */}
       <section className="about-text">
+
         <p>
-          I am a Cloud Engineer currently pursuing a Master’s in Computer Applications at Jaypee Institute of Information Technology. With a strong foundation in C++ and Java, I specialize in designing scalable, secure cloud-native solutions on AWS and automating infrastructure.
+          I am a Cloud and DevOps Engineer currently pursuing a Master’s in
+          Computer Applications at Jaypee Institute of Information Technology.
+          I focus on building scalable, secure, and production-ready cloud
+          systems using modern DevOps practices and cloud-native architectures.
         </p>
 
         <p>
-          My expertise lies in cloud security, containerization, and orchestration using Docker and Kubernetes, along with infrastructure automation through DevOps practices. I am passionate about building reliable, secure backend systems and production-ready deployment pipelines that scale efficiently.
+          My experience includes designing infrastructure on AWS and Azure,
+          automating environments with Terraform and Ansible, and implementing
+          CI/CD pipelines using Jenkins, GitHub Actions, and GitOps workflows.
+          I enjoy working across the full lifecycle of systems—from development
+          and containerization with Docker to orchestration using Kubernetes
+          and automated cloud deployments.
         </p>
+
+        <p>
+          Through various DevOps and cloud projects, I have implemented
+          infrastructure automation, Kubernetes-based deployments, container
+          pipelines, monitoring systems, and secure backend services. I am
+          passionate about improving system reliability, scalability, and
+          operational visibility through well-designed DevOps workflows.
+        </p>
+
       </section>
 
-      {/* What I do */}
+
+      {/* Core Expertise */}
       <section className="service">
-        <h3 className="h3 service-title">What I do</h3>
+
+        <h3 className="h3 service-title">Core Expertise & Technologies</h3>
 
         <ul className="service-list">
+
+
+          {/* Cloud Architecture */}
+
           <li className="service-item">
             <div className="service-icon-box">
               <img
-                src="/assets/images/icon-dev.svg"
-                alt="Cloud architecture icon"
+                src="/images/icon-dev.svg"
+                alt="cloud architecture icon"
                 width="40"
               />
             </div>
@@ -36,69 +61,179 @@ export default function About() {
             <div className="service-content-box">
               <h4 className="h4 service-item-title">Cloud Architecture</h4>
               <p className="service-item-text">
-                Designing secure and scalable cloud-native solutions on AWS using
-                services like EC2, S3, IAM, Lambda, API Gateway, and DynamoDB.
+                Designing scalable cloud-native architectures using AWS
+                and Azure services including EC2, S3, IAM, Lambda,
+                API Gateway, DynamoDB, VPC, Route53, Azure App Service,
+                Azure Container Instances, and secure networking
+                configurations.
               </p>
             </div>
           </li>
 
+
+          {/* Linux & Networking */}
+
           <li className="service-item">
             <div className="service-icon-box">
               <img
-                src="/assets/images/icon-design.svg"
-                alt="Containerization and orchestration icon"
+                src="/images/icon-dev.svg"
+                alt="linux networking icon"
                 width="40"
               />
             </div>
 
             <div className="service-content-box">
-              <h4 className="h4 service-item-title">Docker & Kubernetes</h4>
+              <h4 className="h4 service-item-title">Linux & Networking</h4>
               <p className="service-item-text">
-                Containerizing applications with Docker and managing scalable,
-                production-ready workloads using Kubernetes.
+                Working with Linux servers, SSH authentication,
+                system services, package management, and networking
+                fundamentals including DNS, ports, public/private
+                IPs, and cloud firewall configurations.
               </p>
             </div>
           </li>
 
+
+          {/* Containerization */}
+
           <li className="service-item">
             <div className="service-icon-box">
               <img
-                src="/assets/images/icon-design.svg"
-                alt="DevOps and automation icon"
+                src="/images/icon-design.svg"
+                alt="docker icon"
                 width="40"
               />
             </div>
 
             <div className="service-content-box">
-              <h4 className="h4 service-item-title">DevOps & Automation</h4>
+              <h4 className="h4 service-item-title">Containerization</h4>
               <p className="service-item-text">
-                Implementing Infrastructure as Code with Terraform and automating
-                deployments to ensure consistency, reliability, and scalability.
+                Packaging applications using Docker including image
+                creation, multi-stage builds, container networking,
+                container lifecycle management, and container log
+                inspection.
               </p>
             </div>
           </li>
 
+
+          {/* Kubernetes */}
+
           <li className="service-item">
             <div className="service-icon-box">
               <img
-                src="/assets/images/icon-dev.svg"
-                alt="CI/CD and security icon"
+                src="/images/icon-design.svg"
+                alt="kubernetes icon"
                 width="40"
               />
             </div>
 
             <div className="service-content-box">
-              <h4 className="h4 service-item-title">CI/CD & Cloud Security</h4>
+              <h4 className="h4 service-item-title">Kubernetes Orchestration</h4>
               <p className="service-item-text">
-                Building secure CI/CD pipelines using GitHub Actions and ArgoCD,
-                focusing on access control, secrets management, and best security
-                practices.
+                Managing container workloads using Kubernetes including
+                deployments, services, autoscaling, namespaces,
+                networking, Helm charts, and GitOps-driven delivery.
               </p>
             </div>
           </li>
+
+
+          {/* Infrastructure as Code */}
+
+          <li className="service-item">
+            <div className="service-icon-box">
+              <img
+                src="/images/icon-design.svg"
+                alt="terraform icon"
+                width="40"
+              />
+            </div>
+
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">Infrastructure as Code</h4>
+              <p className="service-item-text">
+                Automating infrastructure provisioning using Terraform
+                and configuration management with Ansible to build
+                reproducible environments and manage infrastructure
+                lifecycle through version-controlled code.
+              </p>
+            </div>
+          </li>
+
+
+          {/* CI/CD */}
+
+          <li className="service-item">
+            <div className="service-icon-box">
+              <img
+                src="/images/icon-dev.svg"
+                alt="cicd icon"
+                width="40"
+              />
+            </div>
+
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">CI/CD Automation</h4>
+              <p className="service-item-text">
+                Designing automated pipelines using Jenkins and GitHub
+                Actions for build automation, container image versioning,
+                secure secrets management, approval gates, and
+                automated deployment workflows.
+              </p>
+            </div>
+          </li>
+
+
+          {/* Monitoring */}
+
+          <li className="service-item">
+            <div className="service-icon-box">
+              <img
+                src="/images/icon-dev.svg"
+                alt="monitoring icon"
+                width="40"
+              />
+            </div>
+
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">Monitoring & Observability</h4>
+              <p className="service-item-text">
+                Implementing observability using Grafana dashboards,
+                Azure Monitor, Application Insights, and centralized
+                logging systems to track metrics, analyze logs,
+                detect anomalies, and enable proactive alerting.
+              </p>
+            </div>
+          </li>
+
+
+          {/* Backend Security */}
+
+          <li className="service-item">
+            <div className="service-icon-box">
+              <img
+                src="/images/icon-design.svg"
+                alt="backend security icon"
+                width="40"
+              />
+            </div>
+
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">Backend & Cloud Security</h4>
+              <p className="service-item-text">
+                Developing secure backend services using Node.js and
+                Express while implementing IAM policies, encryption,
+                authentication mechanisms, secrets management,
+                and secure data handling for cloud-native applications.
+              </p>
+            </div>
+          </li>
+
         </ul>
+
       </section>
-      
+
     </article>
   );
 }

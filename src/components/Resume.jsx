@@ -53,13 +53,14 @@ export default function Resume() {
               <br />
               • Data Visualisation Using Power BI
               <br />
-              • Beginner to Advanced C,C++ 
+              • Beginner to Advanced C,C++
             </p>
           </li>
 
         </ol>
       </section>
 
+      {/* Experience */}
       {/* Experience */}
       <section className="timeline">
         <div className="title-wrapper">
@@ -70,22 +71,51 @@ export default function Resume() {
         </div>
 
         <ol className="timeline-list">
+
+          {/* Quokka Labs */}
+
+          <li className="timeline-item">
+            <h4 className="h4 timeline-item-title">DevOps Engineer Intern</h4>
+            <p className="timeline-text">Quokka Labs</p>
+            <span>Jan 2026 — Present</span>
+
+            <p className="timeline-text" style={{ marginTop: "10px" }}>
+              • Designed and implemented CI/CD pipelines using Jenkins and GitHub
+              for automated build, testing, and deployment workflows.
+              <br />
+              • Containerized applications using Docker and deployed workloads on
+              cloud infrastructure across AWS and Azure environments.
+              <br />
+              • Automated infrastructure provisioning using Terraform and managed
+              environment configurations for scalable deployments.
+              <br />
+              • Integrated monitoring and logging solutions to improve system
+              observability and reliability.
+            </p>
+          </li>
+
+
+          {/* Seldom Labs */}
+
           <li className="timeline-item">
             <h4 className="h4 timeline-item-title">Cloud Engineer Intern</h4>
             <p className="timeline-text">Seldom Labs</p>
             <span>May 2025 — July 2025</span>
 
             <p className="timeline-text" style={{ marginTop: "10px" }}>
-              • Designed cloud-native solutions on AWS (EC2, S3, IAM, Route 53,
-              Lambda).
+              • Designed cloud-native architectures on AWS using services like EC2,
+              S3, IAM, Route 53, and Lambda.
               <br />
-              • Developed Terraform modules to automate infrastructure (VPCs,
-              Security Groups, API Gateway).
+              • Developed Terraform modules to automate infrastructure provisioning
+              including VPC networks, security groups, and API Gateway.
               <br />
               • Implemented CI/CD pipelines using GitHub Actions for automated
-              Docker builds.
+              Docker builds and cloud deployments.
             </p>
           </li>
+
+
+          {/* Entab */}
 
           <li className="timeline-item">
             <h4 className="h4 timeline-item-title">
@@ -95,118 +125,18 @@ export default function Resume() {
             <span>Aug 2023 — Oct 2023</span>
 
             <p className="timeline-text" style={{ marginTop: "10px" }}>
-              • Developed core modules using ASP.NET Core, C#, and MS-SQL.
+              • Developed application modules using ASP.NET Core, C#, and MS-SQL
+              for enterprise education management systems.
               <br />
-              • Built responsive UI with ASP.NET Web Forms and JavaScript,
-              implementing client-side and server-side validations.
+              • Built responsive interfaces using ASP.NET Web Forms and JavaScript
+              with both client-side and server-side validation.
               <br />
               • Implemented secure CRUD operations and stored procedures for
-              reliable data handling.
+              efficient database interactions.
             </p>
           </li>
+
         </ol>
-      </section>
-
-      {/* Skills */}
-      <section className="service">
-        <h3 className="h3 service-title">Technical Skills</h3>
-
-        <ul className="service-list">
-          {/* Cloud */}
-          <li className="service-item">
-            <div className="service-icon-box">
-              <img
-                src="/assets/images/icon-dev.svg"
-                alt="Cloud skills icon"
-                width="40"
-              />
-            </div>
-
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">Cloud Platforms (AWS)</h4>
-              <p className="service-item-text">
-                EC2, S3, IAM, Lambda, API Gateway, DynamoDB, VPC, Route 53, Security
-                Groups, High Availability Architecture.
-              </p>
-            </div>
-          </li>
-
-          {/* Containers */}
-          <li className="service-item">
-            <div className="service-icon-box">
-              <img
-                src="/assets/images/icon-design.svg"
-                alt="Docker Kubernetes icon"
-                width="40"
-              />
-            </div>
-
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">Docker & Kubernetes</h4>
-              <p className="service-item-text">
-                Docker image creation and optimization, container orchestration,
-                Kubernetes deployments, services, scaling, and cluster basics.
-              </p>
-            </div>
-          </li>
-
-          {/* DevOps */}
-          <li className="service-item">
-            <div className="service-icon-box">
-              <img
-                src="/assets/images/icon-design.svg"
-                alt="DevOps automation icon"
-                width="40"
-              />
-            </div>
-
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">DevOps & Infrastructure</h4>
-              <p className="service-item-text">
-                Infrastructure as Code using Terraform, Git-based workflows,
-                automation, environment consistency, and deployment reliability.
-              </p>
-            </div>
-          </li>
-
-          {/* Security */}
-          <li className="service-item">
-            <div className="service-icon-box">
-              <img
-                src="/assets/images/icon-dev.svg"
-                alt="Cloud security icon"
-                width="40"
-              />
-            </div>
-
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">CI/CD & Cloud Security</h4>
-              <p className="service-item-text">
-                Secure CI/CD pipelines with GitHub Actions and ArgoCD, IAM best
-                practices, secrets management, and secure cloud configurations.
-              </p>
-            </div>
-          </li>
-
-          {/* Core */}
-          <li className="service-item">
-            <div className="service-icon-box">
-              <img
-                src="/assets/images/icon-dev.svg"
-                alt="Programming skills icon"
-                width="40"
-              />
-            </div>
-
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">Core Engineering</h4>
-              <p className="service-item-text">
-                C++, Java, Linux fundamentals, and strong understanding
-                of Data Structures & Algorithms.
-              </p>
-            </div>
-          </li>
-        </ul>
       </section>
 
     </article>
